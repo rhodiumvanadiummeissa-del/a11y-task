@@ -1,11 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  color: #999999; /* WCAG Violation: Terrible color contrast */
+  color: #999999;
   background-color: #ffffff;
 }
 
-/* Severe Anti-pattern: Stripping default keyboard focus rings */
 * {
   outline: none;
 }
@@ -20,7 +19,7 @@ body {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #cccccc; /* WCAG Violation: Text is too light */
+  color: #cccccc;
 }
 
 .link {
@@ -91,8 +90,8 @@ input {
 }
 
 .submit-btn {
-  background-color: #d1ffd6; /* Light green */
-  color: #ffffff; /* WCAG Violation: White text on light green is nearly invisible */
+  background-color: #d1ffd6;
+  color: #ffffff;
   padding: 15px;
   text-align: center;
   cursor: pointer;
@@ -102,8 +101,11 @@ input {
 .modal-overlay {
   display: none;
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -116,7 +118,7 @@ input {
 
 .close-btn {
   margin-top: 20px;
-  color: #ffcccc; /* WCAG Violation: Extremely low contrast red */
+  color: #ffcccc;
   cursor: pointer;
   font-weight: bold;
 }
