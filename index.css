@@ -1,11 +1,11 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  color: #999999; /* WCAG Violation: Terrible color contrast */
+  color: #999999; /* Low contrast */
   background-color: #ffffff;
 }
 
-/* Severe Anti-pattern: Stripping default keyboard focus rings */
+/* Stripped focus outlines */
 * {
   outline: none;
 }
@@ -20,7 +20,7 @@ body {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #cccccc; /* WCAG Violation: Text is too light */
+  color: #cccccc;
 }
 
 .link {
@@ -66,19 +66,28 @@ input {
   box-sizing: border-box;
 }
 
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .dropdown-trigger {
   border: 1px solid #ccc;
   padding: 10px;
   background: white;
   cursor: pointer;
-  margin-bottom: 5px;
 }
 
 .dropdown-menu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   border: 1px solid #ccc;
   background: white;
-  margin-bottom: 15px;
+  z-index: 10;
 }
 
 .dropdown-item {
@@ -91,32 +100,10 @@ input {
 }
 
 .submit-btn {
-  background-color: #d1ffd6; /* Light green */
-  color: #ffffff; /* WCAG Violation: White text on light green is nearly invisible */
+  background-color: #d1ffd6;
+  color: #ffffff;
   padding: 15px;
   text-align: center;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background: white;
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.close-btn {
-  margin-top: 20px;
-  color: #ffcccc; /* WCAG Violation: Extremely low contrast red */
   cursor: pointer;
   font-weight: bold;
 }

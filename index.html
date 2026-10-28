@@ -20,37 +20,27 @@
   <div class="content">
     <div class="title">Join the biggest tech event of the year!</div>
     
-    <!-- Image missing alt text -->
     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" class="hero-image">
 
     <div class="form-container">
       <div class="form-title">Register Now</div>
       
-      <!-- Inputs missing label elements -->
       <div>Full Name:</div>
       <input type="text" id="name" placeholder="John Doe">
 
       <div>Email Address:</div>
       <input type="text" id="email" placeholder="john@example.com">
 
-      <!-- Custom dropdown built without ARIA or native select -->
-      <div class="dropdown-trigger" id="ticketType">Select Ticket Type ▾</div>
-      <div class="dropdown-menu" id="ticketMenu">
-        <div class="dropdown-item">Standard ($99)</div>
-        <div class="dropdown-item">VIP ($299)</div>
+      <div>Select Ticket Type:</div>
+      <div class="dropdown-container">
+        <div class="dropdown-trigger" id="ticketType">Select Ticket Type ▾</div>
+        <div class="dropdown-menu" id="ticketMenu">
+          <div class="dropdown-item">Standard ($99)</div>
+          <div class="dropdown-item">VIP ($299)</div>
+        </div>
       </div>
 
-      <!-- Fake button built with a div -->
       <div class="submit-btn" id="submitBtn">Complete Registration</div>
-    </div>
-  </div>
-
-  <!-- Modal missing ARIA roles and focus trapping -->
-  <div class="modal-overlay" id="successModal">
-    <div class="modal-content">
-      <div class="modal-title">Success!</div>
-      <div>Your registration is complete. Please check your email.</div>
-      <div class="close-btn" id="closeBtn">Close Window</div>
     </div>
   </div>
 

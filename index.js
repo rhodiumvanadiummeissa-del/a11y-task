@@ -1,11 +1,9 @@
 const ticketType = document.getElementById('ticketType');
 const ticketMenu = document.getElementById('ticketMenu');
 const submitBtn = document.getElementById('submitBtn');
-const successModal = document.getElementById('successModal');
-const closeBtn = document.getElementById('closeBtn');
 const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-// Dropdown logic: Fails to support Enter/Space keys
+// Toggle dropdown on mouse click only
 ticketType.addEventListener('click', () => {
   if (ticketMenu.style.display === 'block') {
     ticketMenu.style.display = 'none';
@@ -14,7 +12,7 @@ ticketType.addEventListener('click', () => {
   }
 });
 
-// Select dropdown item
+// Select item on mouse click only
 dropdownItems.forEach(item => {
   item.addEventListener('click', (e) => {
     ticketType.innerText = e.target.innerText;
@@ -22,14 +20,7 @@ dropdownItems.forEach(item => {
   });
 });
 
-// Submit logic: Fails to support Enter key, no form validation
+// Submit form on mouse click only
 submitBtn.addEventListener('click', () => {
-  successModal.style.display = 'block';
-  // Note: Focus is not shifted to the modal, screen reader users are lost
-});
-
-// Close modal logic: Fails to support Esc key
-closeBtn.addEventListener('click', () => {
-  successModal.style.display = 'none';
-  // Note: Focus is not returned to the submit button
+  alert('Your registration is complete. Please check your email.');
 });
