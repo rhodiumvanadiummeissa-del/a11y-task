@@ -15,18 +15,20 @@ body {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #cccccc; /* WCAG Violation: Text is too light */
+  color: #333; /* WCAG Violation: Text is too light */
 }
 
 .link {
   margin-left: 15px;
-  color: #aaaaaa;
+  color: #333;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .content {
@@ -39,6 +41,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .hero-image {
@@ -56,6 +59,7 @@ body {
 .form-title {
   font-size: 20px;
   margin-bottom: 15px;
+  color: #333;
 }
 
 input {
@@ -66,8 +70,14 @@ input {
   box-sizing: border-box;
 }
 
+input:focus-visible,
+.dropdown-trigger:focus-visible,
+.dropdown-item:focus-visible {
+  border: 1px solid red   ;
+}
+
 .dropdown-trigger {
-  border: 1px solid #ccc;
+  border: 1px solid #222;
   padding: 10px;
   background: white;
   cursor: pointer;
@@ -91,8 +101,8 @@ input {
 }
 
 .submit-btn {
-  background-color: #d1ffd6; /* Light green */
-  color: #ffffff; /* WCAG Violation: White text on light green is nearly invisible */
+  background-color: green; /* Light green */
+  color: #ffffff;
   padding: 15px;
   text-align: center;
   cursor: pointer;
@@ -119,4 +129,8 @@ input {
   color: #ffcccc; /* WCAG Violation: Extremely low contrast red */
   cursor: pointer;
   font-weight: bold;
+}
+
+label {
+  color: #333;
 }
