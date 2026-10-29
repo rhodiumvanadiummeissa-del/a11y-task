@@ -8,41 +8,41 @@
 </head>
 <body>
   
-  <div class="header">
-    <div class="logo">TechConf 2026</div>
-    <div class="nav">
-      <span class="link" onclick="location.href='#'">Home</span>
-      <span class="link" onclick="location.href='#'">Speakers</span>
-      <span class="link" onclick="location.href='#'">Tickets</span>
-    </div>
-  </div>
+  <header class="header">
+    <p class="logo">TechConf 2026</p>
+    <nav class="nav">
+      <a class="link" href="#">Home</a>
+      <a class="link" href="#">Speakers</a>
+      <a class="link" href="#">Tickets</a>
+    </nav>
+  </header>
 
-  <div class="content">
-    <div class="title">Join the biggest tech event of the year!</div>
+  <main class="content">
+    <h1 class="title">Join the biggest tech event of the year!</h1>
     
-    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" class="hero-image">
+    <img alt="Audience at an event" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" class="hero-image">
 
-    <div class="form-container">
-      <div class="form-title">Register Now</div>
+    <form class="form-container">
+      <h2 class="form-title">Register Now</h2>
       
-      <div>Full Name:</div>
+      <label for="name">Full Name:</label>
       <input type="text" id="name" placeholder="John Doe">
 
-      <div>Email Address:</div>
+      <label for="email">Email Address:</label>
       <input type="text" id="email" placeholder="john@example.com">
 
-      <div>Select Ticket Type:</div>
-      <div class="dropdown-container">
-        <div class="dropdown-trigger" id="ticketType">Select Ticket Type ▾</div>
-        <div class="dropdown-menu" id="ticketMenu">
-          <div class="dropdown-item">Standard ($99)</div>
-          <div class="dropdown-item">VIP ($299)</div>
+      <label>Select Ticket Type:</label>
+      <div class="dropdown-container" tabindex="0">
+        <div role="combobox" aria-expanded="false" aria-haspopup="listbox" class="dropdown-trigger" id="ticketType">Select Ticket Type ▾</div>
+        <div role="listbox" class="dropdown-menu" id="ticketMenu">
+          <div role="option" aria-selected="false" class="dropdown-item">Standard ($99)</div>
+          <div role="option" aria-selected="false" class="dropdown-item">VIP ($299)</div>
         </div>
       </div>
 
-      <div class="submit-btn" id="submitBtn">Complete Registration</div>
-    </div>
-  </div>
+      <button type="submit" class="submit-btn" id="submitBtn">Complete Registration</button>
+    </form>
+  </main>
 
   <script src="index.js"></script>
 </body>
